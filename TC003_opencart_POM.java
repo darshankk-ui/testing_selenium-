@@ -37,14 +37,14 @@ public class TC003_opencart_POM {
 		obj.subscriptions();
 		//System.out.println("name attribute value of yes button is:"+subscribe.getAttribute("name"));
 		
-		if(subscribe.isSelected())
+		if(obj.subscriptions())
 		{
 			System.out.println("Yes is selected");
 		}
 		else {
 			System.out.println("Yes is not selected");
 		}
-		if(driver.findElement(By.xpath("//button[@type='submit']")).isDisplayed())
+		if(obj.submitteddisplayed())
 		{
 			System.out.println("Submit button is disabled");
 			WebElement continu = driver.findElement(By.xpath("//button[@type='submit']"));;
